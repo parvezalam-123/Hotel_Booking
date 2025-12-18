@@ -1,0 +1,131 @@
+#hotel-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    text-align: start;
+    box-shadow: var(--shadow);
+    animation: startAni 0.6s ease;
+}
+
+#hotel-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#hotel-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#hotel-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#hotel-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#hotel-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+#hotel-card:hover {
+    transform: translateY(-7px);
+}
+
+#hotel-image {
+    height: 200px;
+    position: relative;
+}
+
+#hotel-image>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+}
+
+#hotel-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--secondary);
+    color: #fff;
+    width: 70px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#hotel-data {
+    padding: 20px;
+}
+
+#hotel-location {
+    margin-bottom: 5px;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#hotel-name {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+#hotel-rating {
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+#hotel-rating>span {
+    background-color: var(--primary);
+    display: block;
+    width: 35px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#hotel-price {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 7px;
+
+    &>p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &>span {
+        color: var(--gray);
+    }
+}
+
+#hotel-booking-btn {
+    width: 100%;
+}
+
+#hotel-book-btn>button {
+    width: 40%;
+    height: 25px;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#hotel-book-btn>button:hover {
+    background-color: var(--primary-dark);
+}
+
+@keyframes startAni {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

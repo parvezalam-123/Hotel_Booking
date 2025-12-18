@@ -1,0 +1,13 @@
+const { getUserBookings, getBookingDetails, checkAvailability, createBooking, cancelBooking, updateBooking, getHotelBookings } = require("../controllers/bookingControllers");
+const express = require("express");
+const authMiddleware = require("../middlewares/authMiddleware");
+const checkOwnerMiddleware = require("../middlewares/checkOwnerMiddleware");
+const router = express.Router();
+router.get("/user/:userId", authMiddleware, getUserBookings);
+router.get("/:id", authMiddleware, getBookingDetails);
+router.post("/check-availability", authMiddleware, checkAvailability);
+router.post("/", authMiddleware, createBooking);
+router.put("/cancel/:id", authMiddleware, cancelBooking);
+router.put("/:id", authMiddleware, checkOwnerMiddleware, updateBooking);
+router.get("/hotel/:hotelId", getHotelBookings);
+module.exports = router;
